@@ -23,6 +23,7 @@ services:
       - .env
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-lees_korean}
+      UVICORN_RELOAD: "true"
     ports:
       - "8000:8000"
     volumes:
