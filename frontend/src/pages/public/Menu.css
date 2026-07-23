@@ -98,7 +98,7 @@
   margin: 0 -24px 12px;
   padding: 12px 24px;
   background: var(--dancheong-red);
-  color: var(--hanji-raised);
+  color: var(--hanji-raised) !important;
   font-size: 1.15rem;
   text-align: center;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
