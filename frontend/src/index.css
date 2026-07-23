@@ -1,0 +1,112 @@
+/* ---------- Design tokens ---------- */
+:root {
+  /* Color: warm, restrained palette that echoes the restaurant brand without
+     going full "Korean-themed" here - that's the public site's job (Phase 5).
+     This is back-office tooling, so it stays quiet and functional. */
+  --color-paper: #faf7f2;
+  --color-paper-raised: #ffffff;
+  --color-ink: #211e1a;
+  --color-ink-soft: #6b6355;
+  --color-charcoal: #1b1815;
+  --color-line: #e4ddd1;
+  --color-accent: #b0431d;
+  --color-accent-hover: #93370f;
+  --color-accent-soft: #f3e2d9;
+  --color-error: #b3261e;
+  --color-error-soft: #fbeae9;
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-card: 0 1px 2px rgba(33, 30, 26, 0.04), 0 8px 24px rgba(33, 30, 26, 0.06);
+
+  /* ---------- Public site palette ----------
+     Grounded in dancheong temple painting, hanji paper, and the obangsaek
+     five-color tradition, rather than a generic warm-neutral scheme.
+     Namespaced separately from the admin tokens above so the two UIs can
+     evolve independently. */
+  --ink: #1a1613;
+  --ink-soft: #6e6153;
+  --hanji: #f6efe2;
+  --hanji-raised: #fffcf5;
+  --hanji-line: rgba(26, 22, 19, 0.12);
+  --dancheong-red: #9e2b25;
+  --dancheong-red-deep: #7c211c;
+  --dancheong-teal: #1f5c54;
+  --dancheong-gold: #c08a2e;
+
+  --font-display-kr: 'Noto Serif KR', 'Fraunces', Georgia, serif;
+  --font-body-public: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* Consistent, visible focus ring everywhere - keyboard users get the same
+   care as everyone else, especially since this app gates paid work (menu
+   management) behind login. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.route-checking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+}

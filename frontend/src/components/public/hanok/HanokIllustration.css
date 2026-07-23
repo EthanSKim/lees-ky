@@ -1,0 +1,151 @@
+.hanok-illustration {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hanok-illustration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ---------- Entrance sequence: roof settles first, then the frame,
+   then the lattice doors light up, then the glow and lanterns ---------- */
+
+.hanok-roof {
+  opacity: 0;
+  transform: translateY(-26px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.hanok-beam,
+.hanok-pillars {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  transition-delay: 0.45s;
+}
+
+.hanok-bays {
+  opacity: 0;
+  transform: scaleY(0.85);
+  transform-origin: 50% 0%;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  transition-delay: 0.75s;
+}
+
+.hanok-base,
+.hanok-ground {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  transition-delay: 0.3s;
+}
+
+.hanok-glow {
+  opacity: 0;
+  transition: opacity 1.1s ease;
+  transition-delay: 1.05s;
+}
+
+.hanok-lantern {
+  opacity: 0;
+  transform-origin: 50% 0%;
+  transition: opacity 0.6s ease;
+}
+
+.hanok-lantern-left {
+  transition-delay: 1.2s;
+}
+
+.hanok-lantern-right {
+  transition-delay: 1.35s;
+}
+
+.in-view .hanok-roof,
+.in-view .hanok-beam,
+.in-view .hanok-pillars,
+.in-view .hanok-base,
+.in-view .hanok-ground,
+.in-view .hanok-glow,
+.in-view .hanok-lantern {
+  opacity: 1;
+}
+
+.in-view .hanok-roof,
+.in-view .hanok-beam,
+.in-view .hanok-pillars {
+  transform: translateY(0);
+}
+
+.in-view .hanok-bays {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* ---------- Ambient motion, once settled ---------- */
+
+.in-view .hanok-glow {
+  animation: hanokGlowPulse 4.5s ease-in-out infinite;
+  animation-delay: 2.4s;
+}
+
+@keyframes hanokGlowPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+.in-view .hanok-lantern {
+  animation: hanokSway 3.6s ease-in-out infinite;
+}
+
+.in-view .hanok-lantern-left {
+  animation-delay: 1.2s;
+}
+
+.in-view .hanok-lantern-right {
+  animation-delay: 1.55s;
+}
+
+@keyframes hanokSway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* ---------- Reduced motion: show everything immediately, no movement ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .hanok-illustration * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .hanok-roof,
+  .hanok-beam,
+  .hanok-pillars,
+  .hanok-bays,
+  .hanok-base,
+  .hanok-ground,
+  .hanok-glow,
+  .hanok-lantern {
+    opacity: 1 !important;
+  }
+}

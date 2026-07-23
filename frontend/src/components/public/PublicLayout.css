@@ -1,0 +1,29 @@
+.public-layout {
+  background: var(--hanji);
+  color: var(--ink);
+  font-family: var(--font-body-public);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.public-layout h1,
+.public-layout h2,
+.public-layout h3 {
+  font-family: var(--font-display-kr);
+  color: var(--ink);
+}
+
+/* :where() contributes zero specificity, so this is a true low-priority
+   default - any component's own color rule (buttons, footer links, nav
+   links, etc.) wins automatically, regardless of source order. Without
+   :where(), ".public-layout a" (0,1,1) would beat every single-class color
+   rule (0,1,0) applied to a link/button - which is exactly what was
+   happening to .btn-primary's text color. */
+:where(.public-layout) a {
+  color: var(--dancheong-red);
+}
+
+.public-layout :focus-visible {
+  outline-color: var(--dancheong-red);
+}

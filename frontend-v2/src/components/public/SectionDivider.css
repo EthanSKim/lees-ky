@@ -1,0 +1,36 @@
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.section-divider-line {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.section-divider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.tone-red {
+  color: var(--dancheong-red);
+}
+
+.tone-teal {
+  color: var(--dancheong-teal);
+}
+
+.tone-gold {
+  color: var(--dancheong-gold);
+}

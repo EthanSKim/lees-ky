@@ -1,0 +1,76 @@
+.admin-shell {
+  min-height: 100svh;
+  background: var(--color-paper);
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background: var(--color-charcoal);
+  color: #fff;
+}
+
+.admin-header-brand {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.admin-header-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #d8d2c8;
+}
+
+.admin-logout-btn {
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  background: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.admin-logout-btn:hover {
+  background: var(--color-accent-soft);
+}
+
+.admin-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 28px;
+  background: var(--color-charcoal);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.admin-tab {
+  padding: 12px 18px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #b6ada0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+}
+
+.admin-tab:hover {
+  color: #fff;
+}
+
+.admin-tab.active {
+  color: #fff;
+  border-bottom-color: var(--color-accent);
+}

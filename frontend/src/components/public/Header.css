@@ -1,0 +1,142 @@
+.site-header {
+  background: var(--ink);
+  border-bottom: 2px solid var(--dancheong-gold);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--hanji-raised);
+}
+
+.site-brand-en {
+  font-family: var(--font-display-kr);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.site-brand-kr {
+  font-family: var(--font-display-kr);
+  font-size: 0.9rem;
+  color: var(--dancheong-gold);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--hanji-raised);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-nav-link {
+  font-family: var(--font-body-public);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #cfc6b6;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease;
+}
+
+.site-nav-link:hover,
+.site-nav-link.active {
+  color: var(--hanji-raised);
+  border-bottom-color: var(--dancheong-gold);
+}
+
+.open-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(246, 239, 226, 0.08);
+  color: #cfc6b6;
+}
+
+.open-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.open-badge.is-open .open-badge-dot {
+  background: #6fae62;
+}
+
+.open-badge.is-closed .open-badge-dot {
+  background: #a9a096;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--ink);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+
+  .site-nav.open {
+    max-height: 320px;
+    border-bottom: 2px solid var(--dancheong-gold);
+  }
+
+  .site-nav-link,
+  .open-badge {
+    width: 100%;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(246, 239, 226, 0.08);
+    border-radius: 0;
+  }
+
+  .open-badge {
+    justify-content: flex-start;
+  }
+}

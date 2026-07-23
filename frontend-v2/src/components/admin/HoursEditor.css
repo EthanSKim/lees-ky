@@ -1,0 +1,118 @@
+.hours-editor {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hours-editor-state {
+  text-align: center;
+  color: var(--color-ink-soft);
+  padding: 40px 0;
+}
+
+.hours-editor-section {
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.hours-editor-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.hours-editor-hint {
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.hours-editor .field {
+  margin-bottom: 14px;
+}
+
+.hours-editor .field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.hours-editor .field input[type='text'] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.hours-day-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.hours-day-row:first-of-type {
+  border-top: none;
+}
+
+.hours-day-label {
+  width: 90px;
+  flex-shrink: 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding-top: 6px;
+}
+
+.hours-day-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.hours-closed-label {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  padding-top: 6px;
+}
+
+.hours-slot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hours-slot input[type='time'] {
+  padding: 6px 8px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.hours-editor-error {
+  background: var(--color-error-soft);
+  color: var(--color-error);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+}
+
+.hours-editor-saved {
+  color: #1a7f37;
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 560px) {
+  .hours-day-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

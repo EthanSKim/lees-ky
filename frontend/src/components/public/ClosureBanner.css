@@ -1,0 +1,7 @@
+.closure-banner {
+  background: var(--dancheong-red-deep);
+  color: var(--hanji-raised);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+}

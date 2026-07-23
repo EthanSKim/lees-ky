@@ -1,0 +1,74 @@
+.center {
+  text-align: center;
+}
+
+.section-eyebrow {
+  font-family: var(--font-body-public);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dancheong-red);
+  margin-bottom: 8px;
+}
+
+.section-eyebrow.center {
+  text-align: center;
+}
+
+.kr-label {
+  font-family: var(--font-display-kr);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dancheong-red);
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: var(--font-body-public);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--dancheong-red);
+  color: var(--hanji-raised);
+}
+
+.btn-primary:hover {
+  background: var(--dancheong-red-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--hanji-raised);
+}
