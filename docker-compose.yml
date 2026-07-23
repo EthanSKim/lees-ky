@@ -37,7 +37,7 @@ services:
     build: ./frontend
     restart: unless-stopped
     environment:
-      VITE_API_PROXY_TARGET: http://backend:8000
+      VITE_API_PROXY_TARGET: https://lees-ky-api.onrender.com
     ports:
       - "3000:3000"
     volumes:
