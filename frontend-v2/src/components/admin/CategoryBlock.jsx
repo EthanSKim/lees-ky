@@ -93,7 +93,7 @@ export default function CategoryBlock({
             disabled={busy}
             aria-label={`Delete ${category.name} category`}
           >
-            Delete
+            X
           </button>
         </div>
       </div>

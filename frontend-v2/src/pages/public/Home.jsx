@@ -28,7 +28,7 @@ export default function Home() {
           <h1>Lee&apos;s Korean Restaurant</h1>
           <p className="hero-sub">
             Louisville&apos;s first Korean restaurant — home-style bulgogi, bibimbap, and banchan,
-            made the way the Yi and An families have always made it.
+            made the way the Lee and An families have always made it.
           </p>
           <div className="hero-actions">
             <Link to="/menu" className="btn btn-primary">
@@ -56,7 +56,7 @@ export default function Home() {
           <h2>Two families, one kitchen, since 1980.</h2>
           <p>
             Lee&apos;s opened its doors as the very first Korean restaurant in Louisville, started
-            by the Yi family. In 2001, the An family — who had just moved from South Korea — took
+            by the Lee family. In 2001, the An family — who had just moved from South Korea — took
             over, and they&apos;ve been cooking here ever since. What started as a family kitchen is
             still one today.
           </p>
